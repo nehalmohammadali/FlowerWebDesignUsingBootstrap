@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YumYard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(184, 75, 121)">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Blossomia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item main-item">
+            <a class="nav-link" href="#home" style="font-size: 20px;">Home</a>
+          </li>
+          <li class="nav-item main-item">
+            <a class="nav-link" href="#item" style="font-size: 20px;">Items</a>
+          </li>
+          <li class="nav-item main-item">
+            <a class="nav-link" href="#offers" style="font-size: 20px;">Offers</a>
+          </li>
+          <li class="nav-item main-item">
+            <a class="nav-link" href="#aboutus" style="font-size: 20px;">AboutUs</a>
+          </li>
+          <li class="nav-item dropdown" style="font-size: 20px;">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Details
+            </a>
+            <ul class="dropdown-menu">
+              <li style="background-color: pink;"><a class="dropdown-item" href="#login"
+                  data-bs-target="#exampleModallogin" data-bs-toggle="modal">LogIn</a></li>
+              <li style="background-color: pink;"><a class="dropdown-item" href="#logout"
+                  data-bs-target="#exampleModallogOut" data-bs-toggle="modal">LogOut</a></li>
+              <li style="background-color: pink;">
+                <hr class="dropdown-divider">
+              </li>
+              <li style="background-color: pink;"><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                  data-bs-target="#exampleModalcontactus">ContactUs</a></li>
+            </ul>
+          </li>
+          <!-- Cart modal -->
+          <!-- Button trigger modal -->
+          <li>
+            <button type="button" class="btn position-relative" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              style="background-color: rgb(220, 110, 128); color: white;">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                id="cartlen">
+                0
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+          </li>
+  </nav>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Your Cart List</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="productlist"></div>
+          <h5 id="totalprice"> Total Amount : </h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <!-- Carousel -->
+  <h2 id="home" style="margin-top: 90px;"></h2>
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://i.pinimg.com/736x/6d/a7/59/6da759b8600a739623e19c48f25afc81.jpg" class="d-block w-100"
+          alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>🌼 Beauty That Brightens Life</h5>
+          <p>Flowers add color and charm to the world around us. Their vibrant petals and pleasant fragrance make
+            gardens, homes, and special occasions more joyful. Each flower has its own unique beauty that can instantly
+            lift our mood and bring a sense of happiness.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://i.pinimg.com/736x/d0/a0/c4/d0a0c48b12c0aac7f5583ad5b1868fd4.jpg" class="d-block w-100"
+          alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>🌸 Symbol of Love and Emotions</h5>
+          <p>Flowers are a universal way to express feelings. Roses show love, lilies represent purity, and sunflowers
+            spread positivity. People use flowers to celebrate happiness, comfort others, and mark important moments in
+            life, making them a powerful symbol of human emotions.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://i.pinimg.com/736x/83/cd/fa/83cdfa4f17a46e00cfd8255ca43f41f1.jpg" class="d-block w-100"
+          alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>🌺 Importance in Nature</h5>
+          <p>Flowers play an essential role in the environment. They help in pollination by attracting bees,
+            butterflies, and birds, which supports plant growth and food production. Without flowers, the balance of
+            nature would be incomplete, making them truly priceless.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- cart section -->
+  <div class="container-cart mt-5" id="item">
+    <h2
+      style="color: rgb(204, 50, 178); text-align: center; margin-bottom: 50px; font-size: 50px; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; text-shadow: 5px 6px 7px gold;">
+      Our Latest Products</h2>
+    <div class="row d-flex justify-content-between mx-5" id="row">
+
+    </div>
+  </div>
+  <!-- About Us section -->
+  <div class="aboutus mt-5" id="aboutus">
+    <div class="card-body" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h5 class="card-title">About Us</h5>
+      <p class="card-text" style="font-size: 15px; margin-inline: 100px;">Welcome to Blossomia, where flowers speak
+        louder than words 🌸
+        We believe every flower carries an emotion — love, joy, gratitude, and comfort. That’s why we carefully select
+        and arrange each bloom to make your moments extra special.
+
+        From elegant bouquets to everyday floral delights, our goal is to bring freshness, beauty, and happiness
+        straight to your doorstep. We focus on quality, creativity, and customer satisfaction, ensuring every order
+        feels personal and memorable.
+
+        Whether you’re celebrating a big occasion or just want to brighten someone’s day, Blossomia is here to help you
+        say it beautifully — one flower at a time.</p>
+      <a href="#contactus" class="btn btn-primary">ContactUs</a>
+    </div>
+  </div>
+  <!-- LogIn modal -->
+  <div class="modal fade" id="exampleModallogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">LogIn</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Name </label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">LogIn</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- LogOut Modal-->
+  <div class="modal fade" id="exampleModallogOut" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">LogIn</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">LogOut</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ContactUs -->
+  <div class="modal fade" id="exampleModalcontactus" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Leave Us A Message</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Leave A Message :</label>
+              <input type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Offers section -->
+  <div class="container articlesection mt-5" id="offers">
+    <h3 style="color: rgb(204, 50, 178); text-align: center; margin-bottom: 50px; font-size: 50px; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; text-shadow: 5px 6px 7px gold;">Today’s Floral Picks</h3>
+    <div class="row article">
+      <article class="col-sm-6 col-md-3 mb-3"><a class="d-block link-offset-1" href="#"><img class="img-thumbnail mb-3"
+            src="https://i.pinimg.com/736x/1a/bc/e2/1abce25fd9c98873c6b7f33fabc55b9f.jpg" alt="" width="480" height="300" loading="lazy">
+          <h3 class="h5 mb-1">Rose Romance</h3>
+        </a>
+        <p class="text-body-secondary">Fresh red roses at special prices—perfect for love, anniversaries, and surprises.
+        </p>
+      </article>
+      <article class="col-sm-6 col-md-3 mb-3"><a class="d-block link-offset-1" href="#"><img class="img-thumbnail mb-3"
+            src="https://i.pinimg.com/1200x/70/86/e8/7086e845bd94eb54214ec45b753c337b.jpg" alt="" width="480" height="300" loading="lazy">
+          <h3 class="h5 mb-1">Spring Blossom Deal</h3>
+        </a>
+        <p class="text-body-secondary">Bright seasonal flowers to add color and joy to your home or events.
+        </p>
+      </article>
+      <article class="col-sm-6 col-md-3 mb-3"><a class="d-block link-offset-1" href="#"><img class="img-thumbnail mb-3"
+            src="https://i.pinimg.com/736x/31/2f/69/312f699cb45713bae6918c6af5164d37.jpg" alt="" width="480" height="300" loading="lazy">
+          <h3 class="h5 mb-1">Luxury Flower Box</h3>
+        </a>
+        <p class="text-body-secondary">Hand-crafted premium arrangements for unforgettable moments.
+        </p>
+      </article>
+      <article class="col-sm-6 col-md-3 mb-3"><a class="d-block link-offset-1" href="#"><img class="img-thumbnail mb-3"
+            src="https://i.pinimg.com/736x/9c/3e/34/9c3e3408496e168b223300370ac6e57d.jpg" alt="" width="480" height="300" loading="lazy">
+         <h3 class="h5 mb-1">Wedding Specials</h3>
+        </a>
+        <p class="text-body-secondary">Elegant floral designs curated for weddings and grand celebrations.
+        </p>
+      </article>
+      <article class="col-sm-6 col-md-3 mb-3"><a class="d-block link-offset-1" href="#"><img class="img-thumbnail mb-3"
+            src="https://i.pinimg.com/736x/62/ff/25/62ff25a0fd85a94389d79afc2b12d7da.jpg" alt="" width="480" height="300" loading="lazy">
+          <h3 class="h5 mb-1">Birthday Blooms</h3>
+        </a>
+        <p class="text-body-secondary">Say happy birthday with vibrant flowers that speak from the heart.
+        </p>
+      </article>
+      <article class="col-sm-6 col-md-3 mb-3"><a class="d-block link-offset-1" href="#"><img class="img-thumbnail mb-3"
+            src="https://i.pinimg.com/736x/87/25/7a/87257a8b83a09b7d30f9a8f0a7ff92d1.jpg" alt="" width="480" height="300" loading="lazy">
+          <h3 class="h5 mb-1">Surprise Bouquet</h3>
+        </a>
+        <p class="text-body-secondary">Make someone smile today with our exclusive surprise flower offers.
+        </p>
+      </article>
+      <article class="col-sm-6 col-md-3 mb-3"><a class="d-block link-offset-1" href="#"><img class="img-thumbnail mb-3"
+            src="https://i.pinimg.com/736x/f6/c3/e8/f6c3e87e24eb731f4442fa3c73c58537.jpg" alt="" width="480" height="300" loading="lazy">
+          <h3 class="h5 mb-1">Mixed Flower Basket</h3>
+        </a>
+        <p class="text-body-secondary">A beautiful blend of fresh blooms—now available at discounted prices.
+        </p>
+      </article>
+      <article class="col-sm-6 col-md-3 mb-3"><a class="d-block link-offset-1" href="#"><img class="img-thumbnail mb-3"
+            src="https://i.pinimg.com/1200x/77/2a/f1/772af12e90ed9d7aef5a7581082ee9da.jpg" alt="" width="480" height="300" loading="lazy">
+          <h3 class="h5 mb-1">Limited-Time Offer</h3>
+        </a>
+        <p class="text-body-secondary">Grab these stunning flower deals before they’re gone!
+        </p>
+      </article>
+    </div>
+  </div>
+  <!-- Footer section -->
+<footer class="bg-light text-dark pt-5">
+    <hr>
+    <!-- Bottom -->
+    <div class="text-center pb-3">
+      <p class="mb-0">
+        © 2026 Blossomia | Designed with 💐| Designed by Nehal Mohammad Ali
+      </p>
+    </div>
+  </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
